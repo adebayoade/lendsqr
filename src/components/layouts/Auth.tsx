@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from '../icons/Logo';
+import Logo from '../ui/Logo';
 import Image from 'next/image';
 
 export default function Auth({ children }: any) {
@@ -13,7 +13,7 @@ export default function Auth({ children }: any) {
 
           <Image
             className="pt-52"
-            src={'/illustration.png'}
+            src={'/assets/images/illustration.png'}
             alt="illustration"
             width={700}
             height={337}

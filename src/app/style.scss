@@ -25,3 +25,21 @@ textarea {
   box-shadow: 0px 4px 10px 0px #cfcfcf40;
   background-color: white;
 }
+
+.shadow {
+  // box-shadow: 0px 4px 10px 0px #cfcfcf40;
+}
+
+.active-link {
+  color: #213f7d;
+  pointer-events: none;
+  border-left: 3px solid #39cdcc;
+  padding: 15px 20px;
+  @apply bg-gray-50 hover:bg-primary;
+}
+
+.non-active-link {
+  color: #9ba4bb;
+  padding: 15px 20px;
+  @apply hover:bg-gray-50 hover:text-primary;
+}
