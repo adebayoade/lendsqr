@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -10,6 +10,7 @@ import BankDetails from './tabs/bank-details';
 import Loans from './tabs/loans';
 import Savings from './tabs/savings';
 import AppAndSystem from './tabs/app-and-system';
+import { Icon } from '@/components/icons';
 
 export default function User() {
   const [currentTab, setCurrentTab] = useState(1);
@@ -59,12 +60,12 @@ export default function User() {
 
   return (
     <div className="flex flex-col gap-7">
-      <Link className="flex gap-5" href={'/dashboard/users'}>
-        <Image alt="arrow left" width={25} height={9} src={'/assets/icons/arrow-left.svg'} />
+      <Link className="flex items-center gap-5" href={'/dashboard/users'}>
+        <Icon.ArrowLeft />
         <span>Back to Users</span>
       </Link>
 
-      <div className="flex justify-between gap-5">
+      <div className="flex flex-col xl:flex-row justify-between gap-5">
         <h1 className="text-primary text-2xl font-bold">Users Details</h1>
         <div className="flex gap-5">
           <Button size={'lg'} variant={'destructive'}>
@@ -78,26 +79,45 @@ export default function User() {
 
       <div className="flex flex-col gap-7">
         <div className="card relative">
-          <div className="flex mb-10 items-center gap-10">
+          <div className="xl:hidden text-center flex flex-col mb-10 items-center gap-10">
             <div className="flex items-center gap-5">
-              <Image width={100} height={100} alt="avatar" src={'/assets/icons/avatar.svg'} />
+              <Icon.Avatar />
               <div className="flex flex-col gap-2">
                 <span className="text-xl text-primary font-medium">Grace Effiom</span>
-                <span className="text-gray-400">LSQFf587G90</span>
+                <span className="text-gray-400">LSQFf587G90</span>I
               </div>
             </div>
-            <Image width={1} height={80} alt="divider" src={'/assets/icons/pipe.svg'} />
+
             <div className="flex flex-col gap-2">
               <span className="text-sm text-primary font-medium">User&apos;s Tiers</span>
               <span className="text-gray-400">LSQFf587G90</span>
             </div>
-            <Image width={1} height={80} alt="divider" src={'/assets/icons/pipe.svg'} />
+
             <div className="flex flex-col gap-2">
               <span className="text-xl text-primary font-medium">₦200,000.00</span>
               <span className="text-primary">9912345678/Providus Bank</span>
             </div>
           </div>
-          <div className="flex absolute bottom-0 gap-32">
+          <div className="hidden xl:flex mb-10 items-center gap-10">
+            <div className="flex items-center gap-5">
+              <Icon.Avatar />
+              <div className="flex flex-col gap-2">
+                <span className="text-xl text-primary font-medium">Grace Effiom</span>
+                <span className="text-gray-400">LSQFf587G90</span>
+              </div>
+            </div>
+            <Icon.Pipe />
+            <div className="flex flex-col gap-2">
+              <span className="text-sm text-primary font-medium">User&apos;s Tiers</span>
+              <span className="text-gray-400">LSQFf587G90</span>
+            </div>
+            <Icon.Pipe />
+            <div className="flex flex-col gap-2">
+              <span className="text-xl text-primary font-medium">₦200,000.00</span>
+              <span className="text-primary">9912345678/Providus Bank</span>
+            </div>
+          </div>
+          <div className="flex flex-col xl:flex-row xl:absolute bottom-0 gap-5 xl:gap-32">
             {tabs.map(tab => (
               <button
                 className={`${
