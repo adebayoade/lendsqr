@@ -69,10 +69,10 @@ export default function Tabs({ data }: any) {
       <div className="mt-5 flex flex-col xl:flex-row justify-between gap-5">
         <h1 className="text-primary text-2xl font-bold">Users Details</h1>
         <div className="flex flex-col xl:flex-row gap-5">
-          <Button size={'lg'} variant={'destructive'}>
+          <Button size={'sm'} variant={'destructive'}>
             BLACKLIST USER
           </Button>
-          <Button size={'lg'} variant="ghost">
+          <Button size={'sm'} variant="ghost">
             ACTIVATE USER
           </Button>
         </div>
