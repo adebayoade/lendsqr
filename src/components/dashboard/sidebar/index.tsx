@@ -1,9 +1,7 @@
 'use client';
 
 import { Icon } from '@/components/icons';
-
 import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -26,6 +24,7 @@ export default function Sidebar() {
           <span>Switch Organization</span>
           <ChevronDown />
         </button>
+
         <div className="flex flex-col">
           <span className="px-6 text-sm mb-4 text-gray-500">CUSTOMERS</span>
 
@@ -42,6 +41,7 @@ export default function Sidebar() {
             </Link>
           ))}
         </div>
+
         <div className="flex flex-col">
           <span className="px-6 text-sm mb-4 text-gray-500">BUSINESSES</span>
           {BusinessesMenuNavigation.map(({ route, title, icon }: any) => (
@@ -57,6 +57,7 @@ export default function Sidebar() {
             </Link>
           ))}
         </div>
+
         <div className="flex flex-col">
           <span className="px-6 text-sm mb-4 text-gray-500">SETTINGS</span>
           {SettingsMenuNavigation.map(({ route, title, icon }: any) => (

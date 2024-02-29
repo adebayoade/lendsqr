@@ -1,11 +1,24 @@
 import { Icon } from '@/components/icons';
-import Image from 'next/image';
+import { DataTable } from '@/components/ui/DataTable';
+import { columns } from './columns';
 
 export const metadata: Metadata = {
   title: 'Users | Empowering the smartest lenders',
 };
 
-export default function User() {
+const getData = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`);
+    const data = await res.json();
+    return data;
+  } catch (err: any) {
+    console.log(err.message);
+  }
+};
+
+export default async function User() {
+  const data = await getData();
+
   return (
     <div className="flex flex-col gap-10">
       <h1 className="text-primary text-2xl font-bold">Users</h1>
@@ -30,6 +43,10 @@ export default function User() {
           <span>USERS WITH SAVINGS</span>
           <span className="text-2xl font-semibold text-primary">102,453</span>
         </div>
+      </div>
+
+      <div className="mt-10">
+        <DataTable columns={columns} data={data} />
       </div>
     </div>
   );
