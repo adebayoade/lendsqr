@@ -19,7 +19,7 @@ export default function LoginForm() {
   const handleSubmit = (e: any) => {
     setIsLoading(true);
     e.preventDefault();
-    router.push('/dashboard');
+    router.push('/dashboard/users');
   };
 
   return (

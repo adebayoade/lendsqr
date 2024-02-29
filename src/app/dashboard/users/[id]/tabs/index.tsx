@@ -66,7 +66,7 @@ export default function Tabs({ data }: any) {
         <span>Back to Users</span>
       </Link>
 
-      <div className="flex flex-col xl:flex-row justify-between gap-5">
+      <div className="mt-5 flex flex-col xl:flex-row justify-between gap-5">
         <h1 className="text-primary text-2xl font-bold">Users Details</h1>
         <div className="flex flex-col xl:flex-row gap-5">
           <Button size={'lg'} variant={'destructive'}>
@@ -82,12 +82,22 @@ export default function Tabs({ data }: any) {
         <div className="card relative">
           <div className="xl:hidden text-center flex flex-col mb-10 items-center gap-10">
             <div className="flex flex-col xl:flex-row items-center gap-5">
-              <Icon.Avatar />
+              {data?.profile?.avatar ? (
+                <Image
+                  className="rounded-full"
+                  src={data?.profile?.avatar}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+              ) : (
+                <Icon.Avatar />
+              )}
               <div className="flex flex-col gap-2">
                 <span className="text-xl text-primary font-medium">
                   {data?.profile.firstName} {data?.profile.lastName}
                 </span>
-                <span className="text-gray-400">LSQFf587G90</span>I
+                <span className="text-gray-400">LSQFf587G90</span>
               </div>
             </div>
 
