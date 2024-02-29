@@ -103,7 +103,17 @@ export default function Tabs({ data }: any) {
           </div>
           <div className="hidden xl:flex mb-10 items-center gap-10">
             <div className="flex items-center gap-5">
-              <Icon.Avatar />
+              {data?.profile?.avatar ? (
+                <Image
+                  className="rounded-full"
+                  src={data?.profile?.avatar}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+              ) : (
+                <Icon.Avatar />
+              )}
               <div className="flex flex-col gap-2">
                 <span className="text-xl text-primary font-medium">
                   {data?.profile.firstName} {data?.profile.lastName}
@@ -163,7 +173,8 @@ export default function Tabs({ data }: any) {
             {tabs.map(tab => (
               <button
                 className={`${
-                  currentTab === tab.id && 'border-b-2 border-secondary pointer-events-none'
+                  currentTab === tab.id &&
+                  'border-b-2 border-secondary text-secondary pointer-events-none'
                 } pb-2`}
                 onClick={() => setCurrentTab(tab.id)}
                 key={tab.id}
