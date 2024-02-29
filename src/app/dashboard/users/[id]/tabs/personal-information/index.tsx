@@ -5,7 +5,7 @@ export default function PersonalInformation({ data }: any) {
     <div className="flex flex-col gap-5">
       <div className="border-b border-gray-200 py-7">
         <h2 className="font-medium text-primary mb-5">Personal Information</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-10">
           <div className="flex flex-col gap-2">
             <span className="text-sm text-gray-500">FULL NAME</span>
             <h2>
@@ -45,7 +45,7 @@ export default function PersonalInformation({ data }: any) {
 
       <div className="border-b border-gray-200 py-7">
         <h2 className="font-medium text-primary mb-5">Education and Employment</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-10">
           <div className="flex flex-col gap-2">
             <span className="text-sm text-gray-500 uppercase">level of education</span>
             <h2>{data?.education.level}</h2>
@@ -79,7 +79,7 @@ export default function PersonalInformation({ data }: any) {
 
       <div className="border-b border-gray-200 py-7">
         <h2 className="font-medium text-primary mb-5">Socials</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-10">
           <div className="flex flex-col gap-2">
             <span className="text-sm text-gray-500 uppercase">Twitter</span>
             <h2>{data?.socials.twitter}</h2>
@@ -95,9 +95,9 @@ export default function PersonalInformation({ data }: any) {
         </div>
       </div>
 
-      <div className="border-b border-gray-200 py-7">
+      <div className="py-7">
         <h2 className="font-medium text-primary mb-5">Guarantor</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-10">
           <div className="flex flex-col gap-2">
             <span className="text-sm text-gray-500 uppercase">full Name</span>
             <h2>

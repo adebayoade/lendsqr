@@ -68,7 +68,7 @@ export default function Tabs({ data }: any) {
 
       <div className="flex flex-col xl:flex-row justify-between gap-5">
         <h1 className="text-primary text-2xl font-bold">Users Details</h1>
-        <div className="flex gap-5">
+        <div className="flex flex-col xl:flex-row gap-5">
           <Button size={'lg'} variant={'destructive'}>
             BLACKLIST USER
           </Button>
@@ -81,7 +81,7 @@ export default function Tabs({ data }: any) {
       <div className="flex flex-col gap-7">
         <div className="card relative">
           <div className="xl:hidden text-center flex flex-col mb-10 items-center gap-10">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-col xl:flex-row items-center gap-5">
               <Icon.Avatar />
               <div className="flex flex-col gap-2">
                 <span className="text-xl text-primary font-medium">
