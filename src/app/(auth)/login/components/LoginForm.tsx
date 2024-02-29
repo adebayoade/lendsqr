@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export default function LoginForm() {
   const [show, setShow] = useState(false);
-  const handleClick = e => {
+  const handleClick = (e: any) => {
     e.preventDefault();
     setShow(!show);
   };

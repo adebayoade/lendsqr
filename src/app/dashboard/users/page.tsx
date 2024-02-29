@@ -1,6 +1,7 @@
 import { Icon } from '@/components/icons';
 import { DataTable } from '@/components/ui/DataTable';
 import { columns } from './columns';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Users | Empowering the smartest lenders',

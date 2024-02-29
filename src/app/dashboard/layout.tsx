@@ -1,4 +1,5 @@
 import Dashboard from '@/components/layouts/Dashboard';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashboard | Lendsqr | Empowering the smartest lenders',

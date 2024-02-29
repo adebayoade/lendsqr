@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import { useState } from 'react';
 import LoginForm from './components/LoginForm';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Login | Empowering the smartest lenders',

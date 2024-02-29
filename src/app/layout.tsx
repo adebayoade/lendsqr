@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import './style.scss';
+import { Suspense } from 'react';
+import Spinner from '@/components/ui/Spinner';
+import TopLoader from '@/components/ui/TopLoader';
+
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <TopLoader />
+        <Suspense fallback={<Spinner />}>{children}</Suspense>
+      </body>
     </html>
   );
 }
