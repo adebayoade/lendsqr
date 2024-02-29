@@ -1,15 +1,5 @@
-import { Button } from '@/components/ui/Button';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import PersonalInformation from './tabs/personal-information';
-import Documents from './tabs/documents';
-import BankDetails from './tabs/bank-details';
-import Loans from './tabs/loans';
-import Savings from './tabs/savings';
-import AppAndSystem from './tabs/app-and-system';
-import { Icon } from '@/components/icons';
 import Tabs from './tabs';
+import { notFound } from 'next/navigation';
 
 const getData = async (id: any) => {
   try {
@@ -23,7 +13,9 @@ const getData = async (id: any) => {
 
 export default async function User({ params }: any) {
   const data = await getData(params.id);
-  console.log(data);
 
+  if (data === 'Not found') {
+    return notFound();
+  }
   return <Tabs data={data} />;
 }
