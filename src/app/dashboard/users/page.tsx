@@ -22,7 +22,7 @@ export default async function User() {
 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-primary text-2xl font-bold">Users</h1>
+      <h1 className="text-primary text-2xl font-semibold">Users</h1>
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-10">
         <div className="card flex flex-col gap-4">
           <Icon.UsersOverlay />

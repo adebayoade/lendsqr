@@ -14,7 +14,7 @@ export default function Sidebar() {
   const currentRoute = usePathname();
 
   return (
-    <div className="sidebar w-[283px] h-max overflow-y-auto py-5 shadow bg-white">
+    <div className="sidebar w-[283px] h-max overflow-y-auto pt-5 shadow bg-white">
       <div className="flex flex-col gap-5">
         <button
           className={`non-active-link flex items-center px-5 gap-3
@@ -84,7 +84,7 @@ export default function Sidebar() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col gap-10 p-5 text-primary">
+        <div className="mt-12 border-t flex flex-col gap-10 p-5 text-primary">
           <Link href={'#'} className="flex gap-3 items-center">
             <Icon.SignOut />
             <span>Logout</span>

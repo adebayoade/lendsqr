@@ -1,17 +1,19 @@
 .dashboard {
+  font-family: 'Work Sans', sans-serif;
+
   .sidebar {
     .active-link {
       color: #213f7d;
       pointer-events: none;
       border-left: 3px solid #39cdcc;
       padding: 15px 20px;
-      @apply bg-gray-50/70 hover:bg-primary font-medium;
+      @apply bg-[#F3FCFC] hover:bg-primary font-medium;
     }
 
     .non-active-link {
       color: #8790a6;
       padding: 15px 20px;
-      @apply hover:bg-gray-50 hover:text-primary;
+      @apply hover:bg-[#F3FCFC] hover:text-primary;
     }
   }
 

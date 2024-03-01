@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Auth({ children }: any) {
   return (
     <div className="auth grid grid-cols-12">
-      <div className="h-screen hidden xl:block xl:col-span-6 bg-[#FDFDFD]">
+      <div className="h-screen hidden xl:block xl:col-span-6 bg-[#FCFCFC]">
         <div className="pt-20 ml-20">
           <Link href={'/'}>
             <Logo />
@@ -21,7 +21,7 @@ export default function Auth({ children }: any) {
         </div>
       </div>
 
-      <div className="border-l border-gray-100 col-span-12 xl:col-span-6">
+      <div className="col-span-12 xl:col-span-6">
         <div className="h-full">
           <section className="relative px-3 flex w-full h-full flex-col justify-center justify-items-center">
             <div className="xl:hidden absolute top-0 mt-5">

@@ -23,11 +23,9 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        // foreground: "hsl(var(--foreground))",
-        foreground: "#8790a6",
+        foreground: "#545F7D",
         primary: {
           DEFAULT: "#213F7D",
-          // DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
