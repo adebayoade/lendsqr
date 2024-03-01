@@ -6,7 +6,7 @@ export default function Auth({ children }: any) {
   return (
     <div className="auth grid grid-cols-12">
       <div className="h-screen hidden xl:block xl:col-span-6 bg-[#FDFDFD]">
-        <div className="pt-28 ml-20">
+        <div className="pt-20 ml-20">
           <Link href={'/'}>
             <Logo />
           </Link>
@@ -26,7 +26,7 @@ export default function Auth({ children }: any) {
           <section className="relative px-3 flex w-full h-full flex-col justify-center justify-items-center">
             <div className="xl:hidden absolute top-0 mt-5">
               <Link href={'/'}>
-                <Logo />
+                <Image src="/assets/images/logo.png" alt="lendsqr logo" width={150} height={90} />
               </Link>
             </div>
             <div className="w-full px-5 lg:px-20 py-10 mt-20">{children}</div>

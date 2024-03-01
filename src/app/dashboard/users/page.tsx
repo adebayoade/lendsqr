@@ -46,7 +46,7 @@ export default async function User() {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="">
         <DataTable columns={columns} data={data} />
       </div>
     </div>
