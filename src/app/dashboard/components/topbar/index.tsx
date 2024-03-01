@@ -10,7 +10,7 @@ export default function Topbar() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden xl:flex justify-between gap-5 px-5 py-7 shadow-2xl items-center">
+      <div className="hidden xl:flex justify-between gap-5 px-5 py-6 shadow-2xl items-center">
         <div className="flex gap-40 items-center">
           <Link href={'/dashboard'}>
             <Icon.Logo />

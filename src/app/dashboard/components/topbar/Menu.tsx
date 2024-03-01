@@ -21,12 +21,12 @@ export default function Menu() {
       </Link>
 
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex gap-2 items-center">
+        <DropdownMenuTrigger className="focus-visible:outline-none flex gap-2 items-center">
           <Image width={48} height={48} alt="profile picture" src={'/assets/images/avatar.png'} />
           <span className="font-medium text-primary">Adedeji</span>
           <Icon.ChevronDown />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="p-4 pr-11 rounded-none border-none text-sm text-[#8790a6] mt-6">
+        <DropdownMenuContent className="p-4 pr-11 rounded-none border-none text-sm text-[#8790a6] mt-1 xl:mt-6">
           <div className="flex flex-col gap-5">
             <Link href={`#`} className="flex items-center gap-3 hover:text-primary">
               <Icon.Visibility />
