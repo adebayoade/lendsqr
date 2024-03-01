@@ -5,6 +5,14 @@ import { ColumnDef } from '@tanstack/react-table';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import { useState } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/DropdownMenu';
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -70,46 +78,33 @@ export const columns: ColumnDef<Payment>[] = [
               blacklisted
             </span>
           )}
-          <Action id={row.getValue('id')} />
+
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Icon.Filter />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="p-4 pr-8 rounded-xl text-sm text-[#8790a6]">
+              <div className="flex flex-col gap-5">
+                <Link
+                  href={`/dashboard/users/${row.getValue('id')}`}
+                  className="flex items-center gap-3 hover:text-primary"
+                >
+                  <Icon.Visibility />
+                  <span>View Details</span>
+                </Link>
+                <Link href={'#'} className="flex items-center gap-3 hover:text-primary">
+                  <Icon.DeleteUser />
+                  <span>Blacklist User</span>
+                </Link>
+                <Link href={`#`} className="flex items-center gap-3 hover:text-primary">
+                  <Icon.ActivateUser />
+                  <span>Activate User</span>
+                </Link>
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       );
     },
   },
 ];
-
-const Action = ({ id }: any) => {
-  const [show, setShow] = useState(false);
-
-  return (
-    <>
-      <button onClick={() => setShow(!show)}>
-        <Icon.Filter />
-      </button>
-
-      {show && (
-        <div className="absolute z-10 right-0 mt-40 bg-white p-4 rounded-xl">
-          <div className="flex flex-col gap-5">
-            <Link
-              href={`/dashboard/users/${id}`}
-              className="flex items-center gap-5 hover:text-primary"
-            >
-              <Icon.Visibility />
-              <span>View Details</span>
-            </Link>
-            <Link href={'#'} className="flex items-center gap-5 hover:text-primary">
-              <Icon.DeleteUser />
-              <span>Blacklist User</span>
-            </Link>
-            <Link
-              href={`#`}
-              className="flex items-center gap-5 hover:text-primary"
-            >
-              <Icon.ActivateUser />
-              <span>Activate User</span>
-            </Link>
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
