@@ -14,7 +14,7 @@ export default function Sidebar() {
   const currentRoute = usePathname();
 
   return (
-    <div className="w-[283px] h-screen overflow-y-auto py-10 shadow bg-white">
+    <div className="sidebar w-[283px] h-screen overflow-y-auto py-10 shadow bg-white">
       <div className="flex flex-col gap-5">
         <button
           className={`non-active-link text-primary flex items-center gap-3

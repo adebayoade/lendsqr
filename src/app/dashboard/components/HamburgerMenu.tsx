@@ -26,14 +26,14 @@ export default function HamburgerMenu() {
 
   return (
     <>
-      <div className="xl:hidden">
+      <div className="mobile-hamburger xl:hidden">
         <div className="flex items-center justify-between gap-5 px-2 py-2">
           <div className="flex items-center gap-5">
             <DropdownMenu>
-              <DropdownMenuTrigger className='mb-2'>
+              <DropdownMenuTrigger className="focus-visible:outline-none mb-2">
                 <Icon.HamburgerMenu />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="overflow-auto h-[700px] mt-4 rounded-none border-0 text-[#8790a6] xl:hidden">
+              <DropdownMenuContent className="overflow-auto h-[700px] mt-4 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
                 <DropdownMenuLabel>
                   <button
                     className={`flex items-center gap-3
@@ -51,8 +51,7 @@ export default function HamburgerMenu() {
                     key={title}
                     href={route}
                     className={`
-      ${currentRoute === route ? '' : ''}
-  `}
+      ${currentRoute === route ? 'active-link' : 'non-active-link'} link`}
                   >
                     <DropdownMenuItem className="flex gap-3 items-center">
                       <span>{icon}</span>
@@ -67,8 +66,7 @@ export default function HamburgerMenu() {
                     key={title}
                     href={route}
                     className={`
-      ${currentRoute === route ? '' : ''}
-  `}
+                    ${currentRoute === route ? 'active-link' : 'non-active-link'} link`}
                   >
                     <DropdownMenuItem className="flex gap-3 items-center">
                       <span>{icon}</span>
@@ -83,8 +81,7 @@ export default function HamburgerMenu() {
                     key={title}
                     href={route}
                     className={`
-      ${currentRoute === route ? '' : ''}
-  `}
+                    ${currentRoute === route ? 'active-link' : 'non-active-link'} link`}
                   >
                     <DropdownMenuItem className="flex gap-3 items-center">
                       <span>{icon}</span>

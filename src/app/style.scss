@@ -20,26 +20,4 @@ textarea {
   }
 }
 
-.card {
-  @apply rounded px-7 lg:px-10 py-10;
-  box-shadow: 0px 4px 10px 0px #cfcfcf40;
-  background-color: white;
-}
 
-.shadow {
-  // box-shadow: 0px 4px 10px 0px #cfcfcf40;
-}
-
-.active-link {
-  color: #213f7d;
-  pointer-events: none;
-  border-left: 3px solid #39cdcc;
-  padding: 15px 20px;
-  @apply bg-gray-50 hover:bg-primary;
-}
-
-.non-active-link {
-  color: #8790a6;
-  padding: 15px 20px;
-  @apply hover:bg-gray-50 hover:text-primary;
-}

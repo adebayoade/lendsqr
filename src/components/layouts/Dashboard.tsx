@@ -4,7 +4,7 @@ import Logo from '../ui/Logo';
 
 export default function Dashboard({ children }: any) {
   return (
-    <div className="">
+    <div className="dashboard">
       <Topbar />
       <div className="grid grid-cols-1 xl:grid-cols-[283px_1fr] bg-[#FBFBFB] h-screen">
         <div className="hidden xl:block">
