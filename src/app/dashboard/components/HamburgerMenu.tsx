@@ -26,7 +26,7 @@ export default function HamburgerMenu() {
 
   return (
     <>
-      <div className="mobile-hamburger xl:hidden">
+      <div className="mobile-hamburger xl:hidden shadow-2xl">
         <div className="flex items-center justify-between gap-5 px-2 py-2">
           <div className="flex items-center gap-5">
             <DropdownMenu>
@@ -34,7 +34,7 @@ export default function HamburgerMenu() {
                 <Icon.HamburgerMenu />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="overflow-y-scroll max-h-[700px] mt-4 py-5 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
-                <DropdownMenuLabel className="font-medium flex flex-col gap-2">
+                <DropdownMenuLabel className="font-medium flex flex-col gap-2 text-sm">
                   <button
                     className={`flex non-active-link items-center gap-3
     `}
@@ -43,22 +43,24 @@ export default function HamburgerMenu() {
                     <span>Switch Organization</span>
                     <ChevronDown />
                   </button>
+                </DropdownMenuLabel>
 
-                  <Link
-                    href={'/dashboard'}
-                    className={`
+                <Link
+                  href={'/dashboard'}
+                  className={`
       ${
         currentRoute === '/dashboard' ? 'active-link' : 'non-active-link'
       } flex gap-3 items-center hover:bg-white
   `}
-                  >
+                >
+                  <DropdownMenuItem className="flex gap-3 items-center">
                     <Icon.Home />
                     <span>Dashboard</span>
-                  </Link>
-                </DropdownMenuLabel>
+                  </DropdownMenuItem>
+                </Link>
 
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel>CUSTOMERS</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-sm">CUSTOMERS</DropdownMenuLabel>
                 {CustomersMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}
@@ -73,7 +75,7 @@ export default function HamburgerMenu() {
                   </Link>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel>BUSINESSES</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-sm">BUSINESSES</DropdownMenuLabel>
                 {BusinessesMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}
@@ -88,7 +90,7 @@ export default function HamburgerMenu() {
                   </Link>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel>SETTINGS</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-sm">SETTINGS</DropdownMenuLabel>
                 {SettingsMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}

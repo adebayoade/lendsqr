@@ -11,7 +11,7 @@ export default function Dashboard({ children }: any) {
           <Sidebar />
         </div>
 
-        <div className="px-5 lg:px-12 mt-16 pb-10">{children}</div>
+        <div className="px-5 lg:px-12 mt-12 pb-10 h-screen">{children}</div>
       </div>
     </div>
   );

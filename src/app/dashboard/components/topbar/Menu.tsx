@@ -37,7 +37,7 @@ export default function Menu() {
               <span>Preferences</span>
             </Link>
             <Link href={'#'} className="flex items-center gap-3 hover:text-primary">
-              <Icon.Preferences />
+              <Icon.SignOut />
               <span>Log out</span>
             </Link>
           </div>
