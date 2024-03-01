@@ -5,8 +5,10 @@ import Link from 'next/link';
 
 export default function Menu() {
   return (
-    <div className="flex items-center gap-7">
-      <Link href={'#'}>Docs</Link>
+    <div className="flex items-center gap-4 xl:gap-7">
+      <Link className="hidden xl:block" href={'#'}>
+        Docs
+      </Link>
       <Link href={'#'}>
         <Icon.Bell />
       </Link>

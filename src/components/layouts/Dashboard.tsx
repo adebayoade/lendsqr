@@ -1,5 +1,5 @@
-import Sidebar from '../dashboard/sidebar';
-import Topbar from '../dashboard/topbar';
+import Sidebar from '../../app/dashboard/components/sidebar';
+import Topbar from '../../app/dashboard/components/topbar';
 import Logo from '../ui/Logo';
 
 export default function Dashboard({ children }: any) {

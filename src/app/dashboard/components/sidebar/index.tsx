@@ -8,7 +8,7 @@ import {
   BusinessesMenuNavigation,
   CustomersMenuNavigation,
   SettingsMenuNavigation,
-} from './constant';
+} from '../../constant';
 
 export default function Sidebar() {
   const currentRoute = usePathname();

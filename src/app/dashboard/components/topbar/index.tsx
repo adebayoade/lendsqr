@@ -1,31 +1,24 @@
-import Logo from '@/components/ui/Logo';
+'use client';
 
 import Search from './Search';
 import Menu from './Menu';
 import { Icon } from '@/components/icons';
-import Sidebar from '../sidebar';
+import HamburgerMenu from '../HamburgerMenu';
 
 export default function Topbar() {
   return (
     <>
+      {/* Desktop */}
       <div className="hidden xl:flex justify-between gap-5 px-5 py-7 shadow-2xl items-center">
         <div className="flex gap-40 items-center">
-          <Logo />
+          <Icon.Logo />
           <Search />
         </div>
         <Menu />
       </div>
 
-      <div className="xl:hidden">
-        <div className="flex items-center justify-between gap-5 px-2 py-2">
-          <div className='flex items-center'>
-            <Icon.HamburgerMenu />
-            <Logo />
-          </div>
-
-          <Menu />
-        </div>
-      </div>
+      {/* Mobile */}
+      <HamburgerMenu />
     </>
   );
 }
