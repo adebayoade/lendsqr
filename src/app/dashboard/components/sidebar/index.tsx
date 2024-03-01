@@ -1,7 +1,7 @@
 'use client';
 
 import { Icon } from '@/components/icons';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, LogOutIcon } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -14,16 +14,26 @@ export default function Sidebar() {
   const currentRoute = usePathname();
 
   return (
-    <div className="sidebar w-[283px] h-screen overflow-y-auto py-10 shadow bg-white">
+    <div className="sidebar w-[283px] h-max overflow-y-auto py-5 shadow bg-white">
       <div className="flex flex-col gap-5">
         <button
-          className={`non-active-link text-primary flex items-center gap-3
+          className={`non-active-link flex items-center px-5 gap-3
     `}
         >
           <Icon.BriefCase />
           <span>Switch Organization</span>
           <ChevronDown />
         </button>
+
+        <Link
+          href={'/dashboard'}
+          className={`
+      ${currentRoute === '/dashboard' ? 'active-link' : 'non-active-link'} flex gap-3 items-center
+  `}
+        >
+          <Icon.Home />
+          <span>Dashboard</span>
+        </Link>
 
         <div className="flex flex-col">
           <span className="px-6 text-sm mb-4 text-gray-500">CUSTOMERS</span>
@@ -72,6 +82,15 @@ export default function Sidebar() {
               <span>{title}</span>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-16 flex flex-col gap-10 p-5 text-primary">
+          <Link href={'#'} className="flex gap-3 items-center">
+            <Icon.SignOut />
+            <span>Logout</span>
+          </Link>
+
+          <span className="text-sm">v1.2.0</span>
         </div>
       </div>
     </div>

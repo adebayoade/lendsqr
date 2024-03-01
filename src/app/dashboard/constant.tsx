@@ -99,11 +99,16 @@ export const SettingsMenuNavigation = [
   },
   {
     icon: <Icon.Log />,
+    title: 'Fees and Pricing',
+    route: '/dashboard/fees-and-pricing',
+  },
+  {
+    icon: <Icon.Wheel />,
     title: 'Audit Logs',
     route: '/dashboard/audit-logs',
   },
   {
-    icon: <Icon.Wheel />,
+    icon: <Icon.Tire />,
     title: 'Systems Messages',
     route: '/dashboard/system-messages',
   },

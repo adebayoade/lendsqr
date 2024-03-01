@@ -33,17 +33,30 @@ export default function HamburgerMenu() {
               <DropdownMenuTrigger className="focus-visible:outline-none mb-2">
                 <Icon.HamburgerMenu />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="overflow-auto h-[700px] mt-4 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
-                <DropdownMenuLabel>
+              <DropdownMenuContent className="overflow-auto h-[700px] mt-4 py-5 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
+                <DropdownMenuLabel className="font-medium flex flex-col gap-2">
                   <button
-                    className={`flex items-center gap-3
+                    className={`flex non-active-link items-center gap-3
     `}
                   >
                     <Icon.BriefCase />
                     <span>Switch Organization</span>
                     <ChevronDown />
                   </button>
+
+                  <Link
+                    href={'/dashboard'}
+                    className={`
+      ${
+        currentRoute === '/dashboard' ? 'active-link' : 'non-active-link'
+      } flex gap-3 items-center hover:bg-white
+  `}
+                  >
+                    <Icon.Home />
+                    <span>Dashboard</span>
+                  </Link>
                 </DropdownMenuLabel>
+
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel>CUSTOMERS</DropdownMenuLabel>
                 {CustomersMenuNavigation.map(({ route, title, icon }: any) => (

@@ -1,14 +1,14 @@
 .dashboard {
   .sidebar {
-    a.active-link {
+    .active-link {
       color: #213f7d;
       pointer-events: none;
       border-left: 3px solid #39cdcc;
       padding: 15px 20px;
-      @apply bg-gray-50 hover:bg-primary font-semibold;
+      @apply bg-gray-50/70 hover:bg-primary font-medium;
     }
 
-    a.non-active-link {
+    .non-active-link {
       color: #8790a6;
       padding: 15px 20px;
       @apply hover:bg-gray-50 hover:text-primary;
@@ -26,9 +26,9 @@
   .active-link {
     color: #213f7d !important;
     pointer-events: none;
-    @apply font-semibold;
+    @apply font-medium;
   }
   .non-active-link:hover {
-    @apply hover:bg-primary;
+    @apply hover:text-primary;
   }
 }
