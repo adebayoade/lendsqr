@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/DropdownMenu';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, GlobeIcon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   BusinessesMenuNavigation,
@@ -20,6 +20,12 @@ import Link from 'next/link';
 import Search from './topbar/Search';
 import Menu from './topbar/Menu';
 import Image from 'next/image';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/Accordion';
 
 export default function HamburgerMenu() {
   const currentRoute = usePathname();
@@ -34,16 +40,30 @@ export default function HamburgerMenu() {
                 <Icon.HamburgerMenu />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="overflow-y-scroll max-h-[700px] mt-4 py-5 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
-                <DropdownMenuLabel className="font-medium flex flex-col gap-2 text-sm">
-                  <button
-                    className={`flex non-active-link items-center gap-3
-    `}
-                  >
-                    <Icon.BriefCase />
-                    <span>Switch Organization</span>
-                    <ChevronDown />
-                  </button>
-                </DropdownMenuLabel>
+                <Accordion type="single" collapsible className="w-full text-sm px-2 text-[#8790a6]">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className='flex gap-2 text-primary'>
+                      <span>
+                        <Icon.BriefCase />
+                      </span>
+                      <span>Switch Organization</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col text-left items-start gap-5">
+                      <button className="hover:text-primary flex gap-3 items-center">
+                        <GlobeIcon size={17} />
+                        <span>Organization 1</span>
+                      </button>
+                      <button className="hover:text-primary flex gap-3 items-center">
+                        <GlobeIcon size={17} />
+                        <span>Organization 2</span>
+                      </button>
+                      <button className="hover:text-primary flex gap-3 items-center">
+                        <GlobeIcon size={17} />
+                        <span>Organization 3</span>
+                      </button>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
 
                 <Link
                   href={'/dashboard'}
@@ -60,7 +80,7 @@ export default function HamburgerMenu() {
                 </Link>
 
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel className="text-sm">CUSTOMERS</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs font-medium">CUSTOMERS</DropdownMenuLabel>
                 {CustomersMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}
@@ -75,7 +95,7 @@ export default function HamburgerMenu() {
                   </Link>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel className="text-sm">BUSINESSES</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs font-medium">BUSINESSES</DropdownMenuLabel>
                 {BusinessesMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}
@@ -90,7 +110,7 @@ export default function HamburgerMenu() {
                   </Link>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuLabel className="text-sm">SETTINGS</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs font-medium">SETTINGS</DropdownMenuLabel>
                 {SettingsMenuNavigation.map(({ route, title, icon }: any) => (
                   <Link
                     key={title}
@@ -106,7 +126,9 @@ export default function HamburgerMenu() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Image src="/assets/images/logo.png" alt="lendsqr logo" width={150} height={90} />
+            <Link href={'/dashboard'}>
+              <Image src="/assets/images/logo.png" alt="lendsqr logo" width={150} height={90} />
+            </Link>
           </div>
 
           <Menu />

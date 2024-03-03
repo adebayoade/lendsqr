@@ -9,6 +9,7 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/components/ui/DropdownMenu';
+import { Button } from '@/components/ui/button';
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -104,3 +105,63 @@ export const columns: ColumnDef<Payment>[] = [
     },
   },
 ];
+
+const Filter = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <Icon.Filter2 />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="p-4 py-4 pr-8 text-sm text-foreground flex flex-col gap-5 w-[270px]">
+        <div className="flex flex-col gap-2">
+          <span>Organization</span>
+          <select>
+            <option>Select</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Username</span>
+          <select>
+            <option>User</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Email</span>
+          <select>
+            <option>Select</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Date</span>
+          <input type="date" />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Phone Number</span>
+          <select>
+            <option>Select</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Status</span>
+          <select>
+            <option>Select</option>
+          </select>
+        </div>
+
+        <div className="flex items-center gap-5">
+          <Button variant={'ghost2'} size={'lg'}>
+            Reset
+          </Button>
+          <Button size={'lg'} className="text-white" variant="secondary">
+            Filter
+          </Button>
+        </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
