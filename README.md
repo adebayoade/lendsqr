@@ -1,8 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# lendsqr Front-end Assessment
 
-## Getting Started
 
-First, run the development server:
+In the project directory, you can run:
 
 ```bash
 npm run dev
@@ -16,21 +15,26 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [SCSS](https://sass-lang.com/)
+- [Vercel](https://vercel.com/)
 
-## Learn More
+## Production Link
 
-To learn more about Next.js, take a look at the following resources:
+[Lendsqr](https://lendsqr-den.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Here are some screenshots from this application
 
-## Deploy on Vercel
+#### Login
+[Login Screen](https://tinyurl.com/yp7lyxmt)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Users
+[User Screen](https://tinyurl.com/yop2agj9)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Details
+[User Details Screen](https://tinyurl.com/ykty7jtw)
