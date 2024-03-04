@@ -60,7 +60,7 @@ export default function Sidebar() {
         <div className="flex flex-col">
           <span className="px-6 text-xs font-medium mb-4 text-gray-500">CUSTOMERS</span>
 
-          {CustomersMenuNavigation.map(({ route, title, icon }: any) => (
+          {CustomersMenuNavigation.map(({ route, title, icon }) => (
             <Link
               key={title}
               href={route}
@@ -76,7 +76,7 @@ export default function Sidebar() {
 
         <div className="flex flex-col">
           <span className="px-6 text-xs font-medium mb-4 text-gray-500">BUSINESSES</span>
-          {BusinessesMenuNavigation.map(({ route, title, icon }: any) => (
+          {BusinessesMenuNavigation.map(({ route, title, icon }) => (
             <Link
               key={title}
               href={route}
@@ -92,7 +92,7 @@ export default function Sidebar() {
 
         <div className="flex flex-col">
           <span className="px-6 text-xs font-medium mb-4 text-gray-500">SETTINGS</span>
-          {SettingsMenuNavigation.map(({ route, title, icon }: any) => (
+          {SettingsMenuNavigation.map(({ route, title, icon }) => (
             <Link
               key={title}
               href={route}
@@ -106,7 +106,7 @@ export default function Sidebar() {
           ))}
         </div>
 
-        <div className="mt-12 border-t flex flex-col gap-10 p-5 text-primary">
+        <div className="mt-12 border-t flex flex-col gap-10 p-5 hover:text-primary">
           <Link href={'#'} className="flex gap-3 items-center">
             <Icon.SignOut />
             <span>Logout</span>

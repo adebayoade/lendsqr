@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   title: 'Dashboard | Lendsqr | Empowering the smartest lenders',
 };
 
-export default function DashboardLayout({ children }: any) {
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return <Dashboard>{children}</Dashboard>;
 }

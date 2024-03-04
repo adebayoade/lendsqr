@@ -1,8 +1,7 @@
 import Sidebar from '../../app/dashboard/components/sidebar';
 import Topbar from '../../app/dashboard/components/topbar';
-import Logo from '../ui/Logo';
 
-export default function Dashboard({ children }: any) {
+export default function Dashboard({ children }: { children: React.ReactNode }) {
   return (
     <div className="dashboard">
       <Topbar />

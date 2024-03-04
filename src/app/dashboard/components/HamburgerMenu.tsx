@@ -42,7 +42,7 @@ export default function HamburgerMenu() {
               <DropdownMenuContent className="overflow-y-scroll max-h-[700px] mt-4 py-5 rounded-none border-0 text-[#8790a6] xl:hidden mobile-menu">
                 <Accordion type="single" collapsible className="w-full text-sm px-2 text-[#8790a6]">
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className='flex gap-2 text-primary'>
+                    <AccordionTrigger className="flex gap-2 text-primary">
                       <span>
                         <Icon.BriefCase />
                       </span>
@@ -81,7 +81,7 @@ export default function HamburgerMenu() {
 
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="text-xs font-medium">CUSTOMERS</DropdownMenuLabel>
-                {CustomersMenuNavigation.map(({ route, title, icon }: any) => (
+                {CustomersMenuNavigation.map(({ route, title, icon }) => (
                   <Link
                     key={title}
                     href={route}
@@ -96,7 +96,7 @@ export default function HamburgerMenu() {
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="text-xs font-medium">BUSINESSES</DropdownMenuLabel>
-                {BusinessesMenuNavigation.map(({ route, title, icon }: any) => (
+                {BusinessesMenuNavigation.map(({ route, title, icon }) => (
                   <Link
                     key={title}
                     href={route}
@@ -111,7 +111,7 @@ export default function HamburgerMenu() {
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="text-xs font-medium">SETTINGS</DropdownMenuLabel>
-                {SettingsMenuNavigation.map(({ route, title, icon }: any) => (
+                {SettingsMenuNavigation.map(({ route, title, icon }) => (
                   <Link
                     key={title}
                     href={route}

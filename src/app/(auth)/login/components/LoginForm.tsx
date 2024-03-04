@@ -11,12 +11,12 @@ export default function LoginForm() {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setShow(!show);
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setIsLoading(true);
     e.preventDefault();
     router.push('/dashboard/users');
@@ -48,7 +48,7 @@ export default function LoginForm() {
         FORGOT PASSWORD?
       </Link>
 
-      <Button size={'lg'} variant="secondary" className="text-white items-center">
+      <Button type="submit" size={'lg'} variant="secondary" className="text-white items-center">
         {isLoading && <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />}
         <span>LOG IN</span>
       </Button>

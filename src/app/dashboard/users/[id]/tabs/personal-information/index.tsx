@@ -5,7 +5,7 @@ export default function PersonalInformation({ data }: any) {
     <div className="flex flex-col gap-5">
       <div className="border-b border-gray-200 py-7">
         <h2 className="font-medium text-primary mb-5">Personal Information</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           <div className="flex flex-col gap-2">
             <span className="text-sm text-gray-500">FULL NAME</span>
             <h2 className="font-medium">

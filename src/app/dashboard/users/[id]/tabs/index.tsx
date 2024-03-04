@@ -122,13 +122,13 @@ export default function Tabs({ data }: any) {
             <span className="text-primary">9912345678/Providus Bank</span>
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row xl:absolute bottom-0 gap-5 xl:gap-5">
+        <div className="flex flex-col xl:flex-row xl:absolute bottom-0 gap-5 xl:gap-0 flex-wrap">
           {tabs.map(tab => (
             <button
               className={`${
                 currentTab === tab.id &&
                 'border-b-[3px] border-secondary text-secondary pointer-events-none'
-              } pb-2 xl:w-40`}
+              } pb-2 xl:min-w-48`}
               onClick={() => setCurrentTab(tab.id)}
               key={tab.id}
             >

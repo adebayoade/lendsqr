@@ -77,7 +77,7 @@ export const columns: ColumnDef<Payment>[] = [
           )}
 
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="focus-visible:outline-none">
               <Icon.Filter />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="p-4 pr-8 rounded-xl text-sm text-[#8790a6]">

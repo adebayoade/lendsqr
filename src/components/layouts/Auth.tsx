@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Logo from '../ui/Logo';
 import Image from 'next/image';
 
-export default function Auth({ children }: any) {
+export default function Auth({ children }: { children: React.ReactNode }) {
   return (
     <div className="auth grid grid-cols-12">
       <div className="h-screen hidden xl:block xl:col-span-6 bg-[#FCFCFC]">
