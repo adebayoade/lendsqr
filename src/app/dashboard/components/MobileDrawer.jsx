@@ -29,7 +29,7 @@ export default function MobileDrawer() {
   return (
     <>
       <div className="flex gap-5 items-center">
-        <button className="mb-2" onClick={toggleDrawer}>
+        <button style={{ marginBottom: '0.5rem' }} onClick={toggleDrawer}>
           <Icon.HamburgerMenu />
         </button>
         <Link href={'/dashboard'}>
@@ -45,7 +45,10 @@ export default function MobileDrawer() {
         direction="left"
         className="text-[#8790a6] xl:hidden mobile-menu text-sm shadow overflow-auto"
       >
-        <div style={{ overflow: 'auto', height: '92%' }} className="flex flex-col gap-4 pt-4 px-3">
+        <div
+          style={{ overflow: 'auto', height: '92%', paddingTop: '1.25rem' }}
+          className="flex flex-col gap-4 px-3"
+        >
           <Accordion type="single" collapsible className="">
             <AccordionItem value="item-1">
               <AccordionTrigger className="flex gap-2 text-primary">
