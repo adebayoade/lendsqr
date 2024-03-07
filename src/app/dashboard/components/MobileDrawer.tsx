@@ -112,6 +112,7 @@ export default function MobileDrawer() {
             <span className="text-xs font-medium">BUSINESSES</span>
             {BusinessesMenuNavigation.map(({ route, title, icon }) => (
               <Link
+                onClick={() => setIsOpen(!isOpen)}
                 key={title}
                 href={route}
                 className={`
@@ -129,6 +130,7 @@ export default function MobileDrawer() {
             <span className="text-xs font-medium">SETTINGS</span>
             {SettingsMenuNavigation.map(({ route, title, icon }) => (
               <Link
+                onClick={() => setIsOpen(!isOpen)}
                 key={title}
                 href={route}
                 className={`

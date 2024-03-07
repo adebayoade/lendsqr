@@ -9,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/DropdownMenu';
+import { LogOutIcon, SettingsIcon, SlidersHorizontal, SlidersHorizontalIcon } from 'lucide-react';
 
 export default function Menu() {
   return (
@@ -23,7 +24,7 @@ export default function Menu() {
       <DropdownMenu>
         <DropdownMenuTrigger className="focus-visible:outline-none flex gap-2 items-center">
           <Image width={48} height={48} alt="profile picture" src={'/assets/images/avatar.png'} />
-          <span className="font-medium text-primary">Adedeji</span>
+          <span className="font-medium text-primary">Adebayo</span>
           <Icon.ChevronDown />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="p-4 pr-11 rounded-none border-none text-sm text-[#8790a6] mt-1 xl:mt-6">
@@ -33,11 +34,13 @@ export default function Menu() {
               <span>View Profile</span>
             </Link>
             <Link href={'#'} className="flex items-center gap-3 hover:text-primary">
-              <Icon.Preferences />
+              {/* <Icon.Preferences /> */}
+              <SlidersHorizontalIcon size={15} />
               <span>Preferences</span>
             </Link>
             <Link href={'#'} className="flex items-center gap-3 hover:text-primary">
-              <Icon.SignOut />
+              {/* <Icon.SignOut /> */}
+              <LogOutIcon size={15} />
               <span>Log out</span>
             </Link>
           </div>
